@@ -34,6 +34,14 @@
            fetch="https://android.googlesource.com"
            revision="refs/tags/android-12.0.0_r32" />
 
+  <remote  name="github"
+           fetch=".."
+           review="review.lineageos.org" />
+  <default revision="refs/heads/lineage-19.1"
+           remote="github"
+           sync-c="true"
+           sync-j="4" />
+
   <superproject name="platform/superproject" remote="aosp" revision="android-12.1.0_r20" />
   <contactinfo bugurl="go/repo-bug" />
 
@@ -1135,5 +1143,6 @@
   <include name="manifests/remove.xml"/>
   <include name="manifests/pixeldust.xml" />
   <include name="manifests/others.xml" />
+  <include name="manifests/caf.xml" />
 
 </manifest>
